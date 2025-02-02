@@ -28,7 +28,7 @@ function RegisterandLogout() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/sensou">
       <Routes>
         <Route
           path="/executive"
@@ -238,7 +238,7 @@ function App() {
           }
         />
         {/* Other routes */}
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/note/executive/:id" element={<Note />} />
         <Route path="/note/nurse/:id" element={<Note />} />
         <Route path="/note/labtech/:id" element={<Note />} />

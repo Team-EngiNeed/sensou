@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import api from "../api";
 import "../styles/Noted.css";
 import LoadingIndicator from "./LoadingIndicator";
+import bgImage from "../assets/ATRIUM.jpg";
 
 function Note() {
   const { id } = useParams();
@@ -79,7 +80,13 @@ function Note() {
   if (!note) return <div className="loading-message">Loading...</div>;
 
   return (
-    <div className="note-container" id="note">
+    <div
+      className="note-container"
+      id="note"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <div className="note-lists">
         <h2 className="note-title">Note Details</h2>
         <p>

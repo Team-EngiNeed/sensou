@@ -4,10 +4,17 @@ import Note from "../components/Note";
 import arrow from "../assets/arrow.png";
 import "../styles/Home.css";
 import { Link as ScrollLink } from "react-scroll";
+import bgImage from "../assets/LIKOD.jpg";
 
 function Home() {
   return (
-    <div className="hero container" id="hero">
+    <div
+      className="hero container"
+      id="hero"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <div className="hero-text">
         <h1>
           <big>EngiNeed</big>: For a

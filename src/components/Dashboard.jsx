@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import api from "../api";
 import "../styles/Dashboard.css";
 import { Link as RouterLink } from "react-router-dom";
+import bgImage from "../assets/CANTEEN.jpg";
+
 
 function Dashboard() {
   const [notes, setNotes] = useState([]);
@@ -102,7 +104,12 @@ function Dashboard() {
 
   return (
     <div>
-      <div className="dashboard-container" id="dashboard">
+      <div
+            className="dashboard-container"
+            style={{
+              backgroundImage: `url(${bgImage})`, 
+            }}
+          >
         <h1 className="dashboard-title">DASHBOARD</h1>
         {renderDashboardContent()}
       </div>

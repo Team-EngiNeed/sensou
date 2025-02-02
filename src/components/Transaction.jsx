@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import api from "../api";
 import "../styles/Transaction.css";
 import LoadingIndicator from "./LoadingIndicator";
+import bgImage from "../assets/ATRIUM.jpg";
 
 function Transaction() {
   const [notes, setNotes] = useState([]);
@@ -64,7 +65,13 @@ function Transaction() {
 
   return (
     <div>
-      <div className="Transaction-container" id="Transaction">
+      <div
+        className="Transaction-container"
+        id="Transaction"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      >
         <div className="Transaction-list">
           <h2>Send an Order</h2>
           <form onSubmit={createNote}>

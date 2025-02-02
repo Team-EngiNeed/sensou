@@ -10,6 +10,8 @@ import app_register from "../assets/app_regis.png";
 import login from "../assets/login.png";
 import { Link } from "react-router-dom";
 import LoadingIndicator from "./LoadingIndicator";
+import bgImage from "../assets/LIKOD.jpg";
+
 
 function Form({ route, method }) {
   const [username, setUsername] = useState("");
@@ -89,7 +91,12 @@ function Form({ route, method }) {
   };
 
   return (
-    <div className="form-container">
+    <div
+      className="form-container"
+      style={{
+        backgroundImage: `url(${bgImage})`, 
+      }}
+    >
       <div className="contact" id="contact">
         <div className="contact-col">
           <h3>
