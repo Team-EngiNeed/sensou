@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     viteStaticCopy({
       targets: [
-        { src: "src/assets/*", dest: "assets" }, // Copies all assets to dist/assets
+        { src: "src/assets/*", dest: "assets" },
       ],
     }),
   ],
