@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
@@ -28,7 +33,7 @@ function RegisterandLogout() {
 
 function App() {
   return (
-    <BrowserRouter basename="/sensou">
+    <Router>
       <Routes>
         <Route
           path="/executive"
@@ -251,7 +256,7 @@ function App() {
         <Route path="/registerandlogout" element={<RegisterandLogout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
