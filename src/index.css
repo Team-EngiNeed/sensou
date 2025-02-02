@@ -1,68 +1,150 @@
+@import"https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --base-clr: #11121a;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+  --input-bg-clr: #EBECFE;
+  --input-focus-clr: #d0d2fe
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Outfit, serif
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: var(--base-clr);
+  color: var(--text-clr)
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.btn {
+  background: var(--accent-clr);
+  color: var(--text-clr);
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .3s ease
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.btn:hover {
+  background: var(--hover-clr)
+}
+
+.btn img {
+  width: 20px;
+  margin-left: 10px
+}
+
+.form-container {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
+    url('../assets/BG.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px
+}
+
+.contact-col {
+  flex-basis: 48%;
+  color: var(--text-clr)
+}
+
+.contact-col h3 {
+  color: var(--text-clr);
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px
+}
+
+.contact-col h3 img {
+  width: 35px;
+  margin-left: 10px
+}
+
+.contact-col p {
+  max-width: 450px;
+  line-height: 1.5;
+  margin-bottom: 20px
+}
+
+.contact-col ul li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0
+}
+
+.contact-col ul li img {
+  width: 25px;
+  margin-right: 10px
+}
+
+.contact form input,
+.contact form textarea {
+  display: block;
+  width: 100%;
+  background: var(--input-bg-clr);
+  padding: 20px;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  resize: none;
+  transition: background .3s ease, border-color .3s ease
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  background: var(--input-focus-clr);
+  border: 1px solid var(--accent-clr)
+}
+
+.contact-col span {
+  display: block;
+  margin: 20px 0
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-clr);
+  line-height: 1;
+  cursor: pointer
+}
+
+@media (max-width: 650px) {
+  .contact {
+    flex-direction: column;
+    gap: 40px
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  .contact-col {
+    flex-basis: 100%
   }
 }

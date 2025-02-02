@@ -1,0 +1,117 @@
+:root {
+  --base-clr: #11121a;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.note-container {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
+    url('../assets/ATRIUM.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-clr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loading-message {
+  font-size: 1.5rem;
+  color: var(--text-clr);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.note-lists {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  color: var(--text-clr);
+  font-size: 1.1rem;
+}
+
+.note-lists p {
+  margin-bottom: 15px;
+}
+
+.note-title {
+  text-align: center;
+  color: var(--text-clr);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.note-lists p strong {
+  color: lightblue;
+}
+
+.note-lists p {
+  line-height: 1.6;
+  color: var(--secondary-text-clr);
+}
+
+.back-btn {
+  margin-right: auto;
+  /* Align Back button to the left */
+}
+
+.delete-btn {
+  margin-left: auto;
+}
+
+.note-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.delete-btn:hover {
+  background: var(--hover-clr);
+}
+
+.back-btn,
+.delete-btn {
+  background: var(--accent-clr);
+  color: var(--text-clr);
+  padding: 14px 25px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .note-lists {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .note-title {
+    font-size: 1.6rem;
+  }
+
+  .note-lists p {
+    font-size: 1rem;
+  }
+}

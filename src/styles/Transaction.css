@@ -1,0 +1,166 @@
+:root {
+  --base-clr: #11121a;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+}
+
+.Transaction-container {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
+    url('../assets/ATRIUM.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-clr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Transaction-list {
+  width: 1200px;
+  max-height: 700px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* Styles for the form section */
+form {
+  padding: 20px;
+  border-radius: 8px;
+  max-height: 700px;
+}
+
+form h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#comment {
+  display: flex;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  height: 100px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens 1050px and below */
+@media (max-width: 1050px) {
+  .Transaction-list {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  form h2 {
+    font-size: 22px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    padding: 6px;
+  }
+
+
+}
+
+/* For screens 860px and below */
+@media (max-width: 860px) {
+  .Transaction-list {
+    width: 85%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  form h2 {
+    font-size: 20px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    padding: 5px;
+  }
+
+
+}
+
+/* For screens 650px and below */
+@media (max-width: 650px) {
+  .Transaction-list {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  form {
+    padding: 8px;
+  }
+
+  form h2 {
+    font-size: 18px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    padding: 4px;
+  }
+
+}
