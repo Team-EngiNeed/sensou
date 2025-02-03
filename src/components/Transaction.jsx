@@ -44,13 +44,25 @@ function Transaction() {
   const createNote = (e) => {
     setLoading(true);
     e.preventDefault();
+
+    const token = localStorage.getItem("ACCESS_TOKEN"); // Retrieve stored token
+
     api
-      .post("/api/notes/", {
-        fullName,
-        comment,
-        gradeSection,
-        damagedProperty,
-      })
+      .post(
+        "/api/notes/",
+        {
+          fullName,
+          comment,
+          gradeSection,
+          damagedProperty,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Include token
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         console.log("Response data:", res.data); // Log the response
         if (res.status === 201) {
@@ -60,7 +72,10 @@ function Transaction() {
           alert("Failed to make an Order.");
         }
       })
-      .catch((err) => alert(err));
+      .catch((err) => {
+        alert("Error submitting order: " + err);
+        setLoading(false);
+      });
   };
 
   return (

@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 import LoadingIndicator from "./LoadingIndicator";
 import bgImage from "../assets/LIKOD.jpg";
 
-
 function Form({ route, method }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -94,7 +93,7 @@ function Form({ route, method }) {
     <div
       className="form-container"
       style={{
-        backgroundImage: `url(${bgImage})`, 
+        backgroundImage: `url(${bgImage})`,
       }}
     >
       <div className="contact" id="contact">
