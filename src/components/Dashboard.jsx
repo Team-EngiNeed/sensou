@@ -82,7 +82,7 @@ function Dashboard() {
   };
 
   return (
-    <div>
+    <div className="dashboard">
       <div
         className="dashboard-container"
         style={{ backgroundImage: `url(${bgImage})` }}
