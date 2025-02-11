@@ -249,6 +249,7 @@ function App() {
         <Route path="/note/labtech/:id" element={<Note />} />
         <Route path="/note/librarian/:id" element={<Note />} />
         <Route path="/note/engineer/:id" element={<Noted />} />
+        <Route path="/note/utility/:id" element={<Noted />} />
         <Route path="/note/adviser/:id" element={<Noted />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
