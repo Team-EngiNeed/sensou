@@ -435,7 +435,7 @@ const Navbar = () => {
               </ScrollLink>
             </li>
             <li>
-              <RouterLink to="/labtech-orders" className="btn">
+              <RouterLink to="/librarian-orders" className="btn">
                 Order
               </RouterLink>
             </li>
@@ -473,7 +473,7 @@ const Navbar = () => {
               <RouterLink to="/logout">Log Out</RouterLink>
             </li>
             <li>
-              <RouterLink to="/labtech" className="btn">
+              <RouterLink to="/librarian" className="btn">
                 Home
               </RouterLink>
             </li>
@@ -513,7 +513,7 @@ const Navbar = () => {
               </ScrollLink>
             </li>
             <li>
-              <RouterLink to="/engineer-orders" className="btn">
+              <RouterLink to="/utility-orders" className="btn">
                 Order
               </RouterLink>
             </li>
@@ -541,7 +541,7 @@ const Navbar = () => {
               <RouterLink to="/logout">Log Out</RouterLink>
             </li>
             <li>
-              <RouterLink to="/engineer" className="btn">
+              <RouterLink to="/utility" className="btn">
                 Home
               </RouterLink>
             </li>
