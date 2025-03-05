@@ -12,16 +12,28 @@ const About = () => {
         <h3>ENGINEED</h3>
         <h2>For a Better and Safer Learning Space</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-          ratione eius aliquid cupiditate a. Dolorum esse labore eligendi saepe
-          perspiciatis accusantium aperiam deserunt ad, ratione sequi cupiditate
-          unde nemo. Sint.
+          To enhance the learning experience, we have developed an app that
+          offers a more reliable and seamless way to access our platform.
+          Designed for improved accessibility and usability, our app ensures a
+          smoother and more efficient interaction with our services. It is
+          user-friendly and supports real-time order processing, providing a
+          faster and more convenient experience. Currently, the app is available
+          for Windows and Android devices. You can download it using the link
+          below.
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-          ratione eius aliquid cupiditate a. Dolorum esse labore eligendi saepe
-          perspiciatis accusantium aperiam deserunt ad, ratione sequi cupiditate
-          unde nemo. Sint.
+          Unfortunately, we are not able to provide services to Apple users at
+          the moment. We are working on it and will be available soon. In the
+          meantime, we recommend using a Windows or Android device to access our
+          service through this{" "}
+          <a
+            href="https://drive.google.com/file/d/1r6sdPVLYFeEGOBP1Kxn_pTcHhh12VKoF/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            link
+          </a>
+          .
         </p>
       </div>
     </div>
