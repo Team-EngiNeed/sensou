@@ -25,15 +25,14 @@ const About = () => {
           Unfortunately, we are not able to provide services to Apple users at
           the moment. We are working on it and will be available soon. In the
           meantime, we recommend using a Windows or Android device to access our
-          service through this{" "}
+          service through this link{" "}
           <a
             href="https://drive.google.com/file/d/1r6sdPVLYFeEGOBP1Kxn_pTcHhh12VKoF/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
-            link
+            Click Me!
           </a>
-          .
         </p>
       </div>
     </div>
