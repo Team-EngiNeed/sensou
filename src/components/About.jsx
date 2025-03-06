@@ -27,7 +27,7 @@ const About = () => {
           meantime, we recommend using a Windows or Android device to access our
           service through this link{" "}
           <a
-            href="https://drive.google.com/file/d/1r6sdPVLYFeEGOBP1Kxn_pTcHhh12VKoF/view?usp=sharing"
+            href="https://drive.google.com/file/d/1uaV8MM-thYDmwfF3w9R3JqRJgbBXrgin/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
