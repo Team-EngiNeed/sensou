@@ -47,17 +47,7 @@
   color: var(--text-clr);
 }
 
-a {
-  color: var(--accent-clr);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease-in-out;
-}
 
-a:hover {
-  color: var(--secondary-text-clr);
-  text-decoration: underline;
-}
 
 /* media query */
 @media (max-width: 800px) {
