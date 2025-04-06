@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+{
+  /*}import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { useLocation } from "react-router-dom";
@@ -555,6 +556,78 @@ const Navbar = () => {
         );
     }
   };
+
+  return (
+    <nav className={`container ${sticky ? "dark-nav" : ""}`}>
+      <img src={logo} alt="Logo" className="logo" />
+      <ul className={mobileMenu ? "" : "hide-mobile-menu"}>{renderLinks()}</ul>
+      <img src={menu} alt="Menu" className="menu-icon" onClick={toggleMenu} />
+    </nav>
+  );
+};
+
+export default Navbar;
+*/
+}
+
+import React, { useState, useEffect } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { useLocation } from "react-router-dom";
+import logo from "../assets/ENGINEED LOGO.png";
+import menu from "../assets/menu.png";
+import "../styles/Navbar.css";
+
+const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
+  const renderLinks = () => (
+    <>
+      <li>
+        <ScrollLink to="hero" smooth={true} offset={0} duration={500}>
+          Home
+        </ScrollLink>
+      </li>
+      <li>
+        <ScrollLink to="dashboard" smooth={true} offset={0} duration={500}>
+          Dashboard
+        </ScrollLink>
+      </li>
+      <li>
+        <ScrollLink to="Transaction" smooth={true} offset={0} duration={500}>
+          Send us an Order
+        </ScrollLink>
+      </li>
+      <li>
+        <RouterLink to="/logout">Log Out</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/executive-orders" className="btn">
+          Home
+        </RouterLink>
+      </li>
+    </>
+  );
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
