@@ -601,33 +601,94 @@ const Navbar = () => {
     setMobileMenu(!mobileMenu);
   };
 
-  const renderLinks = () => (
-    <>
-      <li>
-        <ScrollLink to="hero" smooth={true} offset={0} duration={500}>
-          Home
-        </ScrollLink>
-      </li>
-      <li>
-        <ScrollLink to="dashboard" smooth={true} offset={0} duration={500}>
-          Dashboard
-        </ScrollLink>
-      </li>
-      <li>
-        <ScrollLink to="Transaction" smooth={true} offset={0} duration={500}>
-          Send us an Order
-        </ScrollLink>
-      </li>
-      <li>
-        <RouterLink to="/logout">Log Out</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/executive-orders" className="btn">
-          Home
-        </RouterLink>
-      </li>
-    </>
-  );
+  const renderLinks = () => {
+    switch (location.pathname) {
+      case "/executive":
+        return (
+          <>
+            <li>
+              <ScrollLink to="hero" smooth={true} offset={0} duration={500}>
+                Home
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="researchers"
+                smooth={true}
+                offset={-260}
+                duration={500}
+              >
+                Researchers
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink to="about" smooth={true} offset={-150} duration={500}>
+                About Us
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                offset={-150}
+                duration={500}
+              >
+                Contact Us
+              </ScrollLink>
+            </li>
+            <li>
+              <RouterLink to="/executive-orders" className="btn">
+                Order
+              </RouterLink>
+            </li>
+          </>
+        );
+      case "/executive-orders":
+        return (
+          <>
+            <li>
+              <ScrollLink to="hero" smooth={true} offset={0} duration={500}>
+                Home
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="dashboard"
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
+                Dashboard
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="Transaction"
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
+                Send us an Order
+              </ScrollLink>
+            </li>
+            <li>
+              <RouterLink to="/logout">Log Out</RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/executive" className="btn">
+                Home
+              </RouterLink>
+            </li>
+          </>
+        );
+      default:
+        return (
+          <li>
+            <RouterLink to="/">Back to Home</RouterLink>
+          </li>
+        );
+    }
+  };
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
