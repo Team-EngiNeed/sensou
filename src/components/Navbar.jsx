@@ -684,11 +684,12 @@ const Navbar = () => {
       default:
         return (
           <li>
-            <RouterLink to="/">Back to Home</RouterLink>
+            <RouterLink to="/executive">Back to Home</RouterLink>
           </li>
         );
     }
   };
+
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
