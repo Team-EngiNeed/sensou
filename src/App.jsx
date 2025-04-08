@@ -1,124 +1,4 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import Navbar from "./components/Navbar";
-import Researchers from "./components/Researchers";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Title from "./components/Title";
-import Orders from "./pages/Orders";
-import Dashboard from "./components/Dashboard";
-import Transaction from "./components/Transaction";
-import Note from "./components/Note";
-import Noted from "./components/Noted";
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar />
-              <Home />
-              <div className="container">
-                <Title
-                  subTitle="The Researchers"
-                  title="Developers and Designers"
-                />
-                <Researchers />
-                <About />
-                <Title subTitle="Contact Us" title="Get in Touch" />
-                <Contact />
-              </div>
-            </>
-          }
-        />
-
-        <Route
-          path="/executive"
-          element={
-            <>
-              <Navbar />
-              <Home />
-              <div className="container">
-                <Title
-                  subTitle="The Researchers"
-                  title="Developers and Designers"
-                />
-                <Researchers />
-                <About />
-                <Title subTitle="Contact Us" title="Get in Touch" />
-                <Contact />
-              </div>
-            </>
-          }
-        />
-        <Route
-          path="/executive-orders"
-          element={
-            <>
-              <Navbar />
-              <Orders />
-              <Dashboard />
-              <Transaction />
-            </>
-          }
-        />
-        {/* Repeat for each role */}
-        <Route
-          path="/engineer"
-          element={
-            <>
-              <Navbar />
-              <Home />
-              <div className="container">
-                <Title
-                  subTitle="The Researchers"
-                  title="Developers and Designers"
-                />
-                <Researchers />
-                <About />
-                <Title subTitle="Contact Us" title="Get in Touch" />
-                <Contact />
-              </div>
-            </>
-          }
-        />
-        <Route
-          path="/engineer-orders"
-          element={
-            <>
-              <Navbar />
-              <Orders />
-              <Dashboard />
-            </>
-          }
-        />
-        {/* Repeat for other roles like utility, adviser, labtech, etc. in the same pattern */}
-
-        <Route path="/note/executive/:id" element={<Note />} />
-        <Route path="/note/nurse/:id" element={<Note />} />
-        <Route path="/note/labtech/:id" element={<Note />} />
-        <Route path="/note/librarian/:id" element={<Note />} />
-        <Route path="/note/engineer/:id" element={<Noted />} />
-        <Route path="/note/utility/:id" element={<Noted />} />
-        <Route path="/note/adviser/:id" element={<Noted />} />
-
-        {/* Removed login, register, logout, etc. */}
-
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
-
-{
-  /*import React from "react";
 import {
   HashRouter as Router,
   Routes,
@@ -140,6 +20,7 @@ import Dashboard from "./components/Dashboard";
 import Transaction from "./components/Transaction";
 import Note from "./components/Note";
 import Noted from "./components/Noted";
+import RedirectHome from "./components/RedirectHome";
 
 function Logout() {
   localStorage.clear();
@@ -155,7 +36,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
+        {/* <Route
           path="/executive"
           element={
             <ProtectedRoute>
@@ -361,8 +242,16 @@ function App() {
               <Transaction />
             </ProtectedRoute>
           }
+        /> */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
         />
-        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/note/executive/:id" element={<Note />} />
         <Route path="/note/nurse/:id" element={<Note />} />
         <Route path="/note/labtech/:id" element={<Note />} />
@@ -381,5 +270,3 @@ function App() {
 }
 
 export default App;
-*/
-}
